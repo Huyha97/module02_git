@@ -1,7 +1,5 @@
 package bai16.thuchanh01;
 
-import bai16.ReadATextFile;
-
 import java.io.*;
 import java.util.Scanner;
 
