@@ -1,4 +1,4 @@
-package lamlaiminitest;
+package lamlaiminitest.minitestngay23thang12;
 
 import java.util.ArrayList;
 import java.util.Scanner;

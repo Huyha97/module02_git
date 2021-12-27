@@ -1,0 +1,5 @@
+nguyen van a	20	8.5
+nguyen van b	20	8.5
+nguyen van c	20	8.5
+nguyen van d	20	8.5
+nguyen van e	20	8.5

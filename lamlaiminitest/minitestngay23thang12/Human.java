@@ -1,4 +1,4 @@
-package lamlaiminitest;
+package lamlaiminitest.minitestngay23thang12;
 
 public class Human {
     private static int VALUE=0;

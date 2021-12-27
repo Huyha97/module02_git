@@ -1,4 +1,4 @@
-package lamlaiminitest;
+package lamlaiminitest.minitestngay23thang12;
 
 public class Student extends Human {
     private double mathPoint;

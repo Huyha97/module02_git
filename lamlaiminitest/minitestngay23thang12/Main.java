@@ -1,7 +1,6 @@
-package lamlaiminitest;
+package lamlaiminitest.minitestngay23thang12;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -24,10 +23,11 @@ public class Main {
                 switch (choice) {
                     case 1:
                         Student student = studentManager.CreatStudent();
-                        if ( studentManager.addStudent(student))
-                            System.out.println("Add succcesfully!!");
-                        else
-                            System.out.println("Add failed!!!");
+                        studentManager.addStudent(student);
+//                        if ( studentManager.addStudent(student))
+//                            System.out.println("Add succcesfully!!");
+//                        else
+//                            System.out.println("Add failed!!!");
                         break;
                     case 2:
                         System.out.println(" input id want to edit");
