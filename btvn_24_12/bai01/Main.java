@@ -1,5 +1,8 @@
 package btvn_24_12.bai01;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,6 +21,8 @@ public class Main {
             System.out.println("5. Display all laptop by Brand");
             System.out.println("6. Display all laptop in the price range ");
             System.out.println("7. Search laptop by color;");
+            System.out.println("8. Write laptop to file");
+            System.out.println("9. Read laptop to file");
             System.out.println("0. Exit");
             System.out.println("Input your choice: ");
             choice = scanner.nextInt();
@@ -33,8 +38,8 @@ public class Main {
                 case 2:
                     try {
                         System.out.println(" input id laptop which you want edit");
-                        int id2 = scanner.nextInt();
-                        Laptop laptopEdit = laptopManager.editLaptop(id2);
+                        int editID = scanner.nextInt();
+                        Laptop laptopEdit = laptopManager.editLaptop(editID);
 
                     } catch (Exception e) {
                         System.out.println("Failed!!! Please try again!");
@@ -42,8 +47,8 @@ public class Main {
                     break;
                 case 3:
                     System.out.println(" input id laptop which you want delete");
-                    int id3 = scanner.nextInt();
-                    Laptop laptopDelete = laptopManager.Deletelaptop(id3);
+                    int deleteID = scanner.nextInt();
+                    Laptop laptopDelete = laptopManager.Deletelaptop(deleteID);
                     break;
                 case 4:
                     laptopManager.displayAll();
@@ -51,8 +56,8 @@ public class Main {
                 case 5:
                     System.out.println(" input the brand of laptop you want display");
                     String brand = scanner.next();
-                    ArrayList<Laptop> arr5 = laptopManager.displayByBrand(brand);
-                    System.out.println(arr5);
+                    ArrayList<Laptop> laptopBrand = laptopManager.displayByBrand(brand);
+                    System.out.println(laptopBrand);
                     break;
                 case 6:
                     System.out.println("Input Down price: : ");
@@ -62,20 +67,38 @@ public class Main {
                     ArrayList<Laptop> laptops = laptopManager.SearchLaptopByPriceRange(priceDown, priceUp);
                     System.out.println("Display all laptops by price range:  ");
                     System.out.println();
-                    for (Laptop lap : laptops) {
-                        System.out.println(lap);
+                    for (Laptop laptop : laptops) {
+                        System.out.println(laptop);
                     }
                     break;
                 case 7:
                     System.out.println("input the color want to file: ");
                     scanner.nextLine();
                     String color = scanner.nextLine();
-                    laptopManager.SearchbyColor(color);
+                    ArrayList<Laptop> laptopColor = laptopManager.searchbyColor(color);
+                    System.out.println("Display all laptop by color: ");
+                    for (Laptop laptop : laptopColor) {
+                        System.out.println(laptop);
+                    }
                     break;
-
-
+                case 8:
+                    try {
+                        ArrayList<String> strings = laptopManager.listBrand();
+                        laptopManager.writeBrand(strings, "btvn_24_12/bai01/brand.txt");
+                        System.out.println("wrtite file scuccessfully!!!");
+                    } catch (IOException e) {
+                        System.err.println(e.getMessage());
+                    }
+                    break;
+                case 9:
+                    try {
+                        System.out.println("Read file successfully!!!");
+                        laptopManager.readBrand("btvn_24_12/bai01/brand.txt");
+                    } catch (IOException e) {
+                        System.err.println(e.getMessage());
+                    }
+                    break;
             }
-
-        } while (choice != 0);
+        } while (choice != 0) ;
     }
 }
