@@ -1,4 +1,4 @@
-package bai21;
+package bai21.thuchanh01;
 
 public class FactoryAnimal {
     public Animal getAnimal(String type) {

@@ -1,4 +1,4 @@
-package bai21;
+package bai21.thuchanh01;
 
 public class FacoryDemo {
     public static void main(String[] args) {
