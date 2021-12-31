@@ -22,11 +22,13 @@ public class Student extends Human {
 
     @Override
     public String toString() {
-        return "Student{" + super.toString() +
-                "avgPoint=" + avgPoint +
-                '}';
-    }
-    public String displayXepLoai(){
-        return ("TEN" + getName() + "TUOI" + getAge() + " GIOI TINH" + getGender() + "ADDRESS" + getAddress() + "DiemTB" + getAvgPoint());
+        return "Student{" +
+                "name='" + super.getName() + '\'' +
+                ", age=" + super.getAge() +
+                ", gender='" + super.getGender() + '\'' +
+                ", address='" + super.getAddress() + '\'' +
+                ", average=" + avgPoint +
+                "}"+"\n"  ;
+
     }
 }

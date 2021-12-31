@@ -12,15 +12,15 @@ public class Main {
         do {
             System.out.println("⓿ ❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿ -----MENU------ ⓫ ⓬ ⓭ ⓮ ⓯ ⓰ ⓱ ⓲ ⓳ ⓴");
             System.out.println("㊊  1. Add student                                               ㊏  ");
-            System.out.println("|  2. Delete student by name                                     |   ");
+            System.out.println("    2. Delete student by name                                       ");
             System.out.println("㊌  3. Edit student by name                                      ㊋ ");
-            System.out.println("|  4. Display all Student                                        | ");
+            System.out.println("    4. Display all Student                                        ");
             System.out.println("㊓  5. Display all student with avgPoint > 7,5                   ㊔ ");
-            System.out.println("| 6. Display student in format                                   | ");
+            System.out.println("    6. Display student in format                                    ");
             System.out.println("㊑  7. Write file                                                ㊒ ");
-            System.out.println("|  8. Read File                                                  | ");
+            System.out.println("    8. Read File                                                   ");
             System.out.println("㊎  0. Exit                                                      ㊊ ");
-            System.out.println("|  Input your choice:                                            | ");
+            System.out.println("  Input your choice:                                            ");
             System.out.println("ㄱ ㄲ ㄳ ㄴ ㄵ ㄶ ㄷ ㄸ ㄹ ㄺ ㄻ ㄼ ㄽ ㄾ ㄿ ㅀ ㅁ ㅂ ㅃ ㅄ ㅅ ㅆ ㅇ ㅈ  ");
             choice = scanner.nextInt();
             switch (choice) {
@@ -44,7 +44,9 @@ public class Main {
                     studentManager.displayAll();
                     break;
                 case 5:
-                    System.out.println(studentManager.displayByAvgPointOver7point5());
+//                    System.out.println(studentManager.displayByAvgPointOver7point5() + "\n");
+                    System.out.println("all student by average");
+                    System.out.println(studentManager.displayByAvgPointOver7point5() );
                     break;
                 case 6:
                     System.out.println("display student in format");
